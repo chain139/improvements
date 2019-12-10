@@ -12,12 +12,12 @@
     <properties>
         <java.version>1.8</java.version>
         <algorithms.version>1.0-SNAPSHOT</algorithms.version>
-
         <junit.version>4.12</junit.version>
     </properties>
 
     <modules>
         <module>algorithms</module>
+        <module>howTomcatWorks</module>
     </modules>
 
 
