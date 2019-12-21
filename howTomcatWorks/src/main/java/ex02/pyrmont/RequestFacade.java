@@ -6,7 +6,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
-import javax.servlet.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletInputStream;
+import javax.servlet.ServletRequest;
 
 public class RequestFacade implements ServletRequest {
 
@@ -49,41 +51,6 @@ public class RequestFacade implements ServletRequest {
     return 0;
   }
 
-  @Override
-  public ServletContext getServletContext() {
-    return null;
-  }
-
-  @Override
-  public AsyncContext startAsync() throws IllegalStateException {
-    return null;
-  }
-
-  @Override
-  public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) throws IllegalStateException {
-    return null;
-  }
-
-  @Override
-  public boolean isAsyncStarted() {
-    return false;
-  }
-
-  @Override
-  public boolean isAsyncSupported() {
-    return false;
-  }
-
-  @Override
-  public AsyncContext getAsyncContext() {
-    return null;
-  }
-
-  @Override
-  public DispatcherType getDispatcherType() {
-    return null;
-  }
-
   public RequestDispatcher getRequestDispatcher(String path) {
     return request.getRequestDispatcher(path);
   }
@@ -98,10 +65,6 @@ public class RequestFacade implements ServletRequest {
 
   public int getContentLength() {
     return request.getContentLength();
-  }
-
-  public long getContentLengthLong() {
-    return 0;
   }
 
   public String getContentType() {
@@ -153,7 +116,7 @@ public class RequestFacade implements ServletRequest {
   }
 
   public String getScheme() {
-   return request.getScheme();
+    return request.getScheme();
   }
 
   public String getServerName() {
@@ -173,7 +136,7 @@ public class RequestFacade implements ServletRequest {
   }
 
   public void setCharacterEncoding(String encoding)
-    throws UnsupportedEncodingException {
+          throws UnsupportedEncodingException {
     request.setCharacterEncoding(encoding);
   }
 
