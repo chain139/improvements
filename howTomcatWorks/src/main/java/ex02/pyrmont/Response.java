@@ -73,7 +73,6 @@ public class Response implements ServletResponse {
     return null;
   }
 
-  @Override
   public String getContentType() {
     return null;
   }
@@ -93,7 +92,6 @@ public class Response implements ServletResponse {
     return writer;
   }
 
-  @Override
   public void setCharacterEncoding(String s) {
 
   }

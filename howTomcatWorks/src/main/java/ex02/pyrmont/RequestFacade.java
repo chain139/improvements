@@ -6,9 +6,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletRequest;
+import javax.servlet.*;
 
 public class RequestFacade implements ServletRequest {
 
@@ -31,22 +29,18 @@ public class RequestFacade implements ServletRequest {
     return request.getRealPath(path);
   }
 
-  @Override
   public int getRemotePort() {
     return 0;
   }
 
-  @Override
   public String getLocalName() {
     return null;
   }
 
-  @Override
   public String getLocalAddr() {
     return null;
   }
 
-  @Override
   public int getLocalPort() {
     return 0;
   }

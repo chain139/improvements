@@ -18,8 +18,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.4</maven.compiler.source>
+        <maven.compiler.target>1.4</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -27,16 +27,29 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>3.0-alpha-1</version>
-        </dependency>
-        <dependency>
+        <!--<dependency>
+             <groupId>javax.servlet</groupId>
+             <artifactId>servlet-api</artifactId>
+             <version>3.0-alpha-1</version>
+         </dependency>
+         <dependency>
             <groupId>tomcat</groupId>
             <artifactId>tomcat-util</artifactId>
             <version>5.5.23</version>
         </dependency>
+         <dependency>
+             <groupId>org.apache.tomcat</groupId>
+             <artifactId>tomcat-api</artifactId>
+             <version>9.0.30</version>
+         </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.catalina/catalina -->
+        <!--<dependency>
+            <groupId>org.apache.catalina</groupId>
+            <artifactId>catalina</artifactId>
+            <version>6.0.26</version>
+        </dependency>-->
+
+
 
     </dependencies>
 

@@ -25,7 +25,6 @@ public class ResponseFacade implements ServletResponse {
     return response.getCharacterEncoding();
   }
 
-  @Override
   public String getContentType() {
     return null;
   }
@@ -42,7 +41,6 @@ public class ResponseFacade implements ServletResponse {
     return response.getWriter();
   }
 
-  @Override
   public void setCharacterEncoding(String s) {
 
   }

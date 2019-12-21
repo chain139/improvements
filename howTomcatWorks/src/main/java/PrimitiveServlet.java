@@ -9,17 +9,14 @@ import java.util.Date;
  * @Description
  */
 public class PrimitiveServlet implements Servlet {
-    @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         System.out.println("PrimitiveServlet init!");
     }
 
-    @Override
     public ServletConfig getServletConfig() {
         return null;
     }
 
-    @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         System.out.println("from service");
         PrintWriter out = servletResponse.getWriter();
@@ -27,12 +24,10 @@ public class PrimitiveServlet implements Servlet {
         out.print(new Date());
     }
 
-    @Override
     public String getServletInfo() {
         return null;
     }
 
-    @Override
     public void destroy() {
         System.out.println("PrimitiveServlet destroy!");
     }
