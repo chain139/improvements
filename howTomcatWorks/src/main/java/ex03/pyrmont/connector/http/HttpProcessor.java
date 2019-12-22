@@ -89,7 +89,7 @@ public class HttpProcessor {
     while (true) {
       HttpHeader header = new HttpHeader();;
 
-      // Read the next header
+      // Read the next header 填充HttpHeader实例，就像填充HttpRequest那样
       input.readHeader(header);
       if (header.nameEnd == 0) {
         if (header.valueEnd == 0) {
@@ -140,7 +140,7 @@ public class HttpProcessor {
   private void parseRequest(SocketInputStream input, OutputStream output)
     throws IOException, ServletException {
 
-    // Parse the incoming request line
+    // Parse the incoming request line 使用SocketInputStream实例填充requestLine
     input.readRequestLine(requestLine);
     String method =
       new String(requestLine.method, 0, requestLine.methodEnd);
@@ -167,7 +167,7 @@ public class HttpProcessor {
     }
 
 
-    // Checking for an absolute URI (with the HTTP protocol)
+    // Checking for an absolute URI (with the HTTP protocol) URI可以是绝对路径，但大多数URI都指向一个相对路径中的资源
     if (!uri.startsWith("/")) {
       int pos = uri.indexOf("://");
       // Parsing out protocol and host name

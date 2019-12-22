@@ -24,7 +24,8 @@ public class ServletProcessor {
       // create a URLClassLoader
       URL[] urls = new URL[1];
       URLStreamHandler streamHandler = null;
-      File classPath = new File(Constants.WEB_ROOT);
+      //File classPath = new File(Constants.WEB_ROOT);
+      File classPath = new File(Constants.SERVLET_ROOT);
       String repository = (new URL("file", null, classPath.getCanonicalPath() + File.separator)).toString() ;
       urls[0] = new URL(null, repository, streamHandler);
       loader = new URLClassLoader(urls);
@@ -50,9 +51,11 @@ public class ServletProcessor {
       ((HttpResponse) response).finishResponse();
     }
     catch (Exception e) {
+      e.printStackTrace();
       System.out.println(e.toString());
     }
     catch (Throwable e) {
+      e.printStackTrace();
       System.out.println(e.toString());
     }
   }

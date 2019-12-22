@@ -59,6 +59,7 @@ package org.apache.catalina.util;
 
 import java.text.MessageFormat;
 import java.util.Hashtable;
+import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
@@ -104,7 +105,7 @@ public class StringManager {
 
     private StringManager(String packageName) {
         String bundleName = packageName + ".LocalStrings";
-        bundle = ResourceBundle.getBundle(bundleName);
+        bundle = ResourceBundle.getBundle(bundleName, Locale.ENGLISH);
     }
 
     /**

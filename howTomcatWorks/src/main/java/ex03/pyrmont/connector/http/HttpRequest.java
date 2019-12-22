@@ -146,7 +146,7 @@ public class HttpRequest implements HttpServletRequest {
     if (encoding == null)
       encoding = "ISO-8859-1";
 
-    // Parse any parameters specified in the query string
+    // Parse any parameters specified in the query string 该类中的queryString的值在processor里面完成并设置的
     String queryString = getQueryString();
     try {
       RequestUtil.parseParameters(results, queryString, encoding);
